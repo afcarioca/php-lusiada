@@ -80,7 +80,7 @@ return [
         | The passphrase for your private key. Can be null if none set.
         |
         */
-
+        'identifier' => 'user_id',
         'passphrase' => env('JWT_PASSPHRASE'),
 
     ],

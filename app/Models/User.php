@@ -12,7 +12,7 @@ class User extends Authenticatable implements JWTSubject
 {
     use HasFactory, Notifiable;
 
-   // protected $primaryKey = 'id';
+    protected $primaryKey = 'id';
 
 
     /**
