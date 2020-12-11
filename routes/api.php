@@ -20,6 +20,7 @@ Route::post('user', [UserController::class, 'register']);
 
 Route::group(['middleware' => ['jwt.verify']], function() {
     Route::get('user', [UserController::class, 'getAuthenticatedUser']);
+    Route::post('user', [UserController::class, 'register']);
     Route::post('noticias', [NoticiaController::class, 'store']);
     Route::put('noticias/{id}', [NoticiaController::class, 'update']);
     Route::delete('noticias/{id}', [NoticiaController::class, 'delete']);
