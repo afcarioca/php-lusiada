@@ -15,7 +15,6 @@ use App\Http\Controllers\AuthController;
 Route::get('noticias', [NoticiaController::class, 'index']);
 Route::get('noticias/{id}',[NoticiaController::class, 'show']);
 Route::post('login',[UserController::class, 'authenticate']);
-Route::post('user', [UserController::class, 'register']);
 
 
 Route::group(['middleware' => ['jwt.verify']], function() {
