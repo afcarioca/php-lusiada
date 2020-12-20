@@ -23,11 +23,11 @@ return [
 
     'allowed_origins_patterns' => ['/(.*)\.wip/','/(.*)\.test/'],
 
-    'allowed_headers' => ['content-type', 'accept', 'x-custom-header'],
+    'allowed_headers' => ['*'],
 
     'exposed_headers' => ['x-custom-response-header'],
 
-    'max_age' => 60,
+    'max_age' =>  86400,
 
     'supports_credentials' => false,
 
