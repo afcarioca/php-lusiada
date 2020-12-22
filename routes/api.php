@@ -17,9 +17,7 @@ Route::post('login',[UserController::class, 'authenticate']);
 
 Route::group(['middleware' => ['jwt.verify']], function() {
     Route::get('noticias', [NoticiaController::class, 'index']);
-
     Route::get('noticias/{id}',[NoticiaController::class, 'show']);
-
     Route::get('user', [UserController::class, 'index']);
     Route::post('user', [UserController::class, 'register']);
     Route::put('user/{id}', [UserController::class, 'update']);
